@@ -1,0 +1,57 @@
+{
+    "mode": "local",
+    "pages": {
+        "1": {
+            "id": "about",
+            "headline": "About",
+            "page": "About.js",
+            "url": "/"
+        },
+        "2": {
+            "id": "kompetenzen",
+            "part": 1,
+            "headline": "Kompetenzen",
+            "page": "Kompetenzen.js",
+            "url": "kompetenzen"
+        },
+        "3": {
+            "id": "kompetenzen--2",
+            "part": 2,
+            "page": "Kompetenzen.js",
+            "url": "kompetenzen"
+        },
+        "4": {
+            "id": "projekte",
+            "headline": "Projekte",
+            "page": "Projekte.js",
+            "url": "projekte",
+            "part": 1
+        },
+        "5": {
+            "id": "projekte",
+            "headline": "Projekte",
+            "page": "Projekte.js",
+            "url": "projekte",
+            "part": 2
+        },
+        "6": {
+            "id": "projekte",
+            "headline": "Projekte",
+            "page": "Projekte.js",
+            "url": "projekte",
+            "part": 3
+        },
+        "7": {
+            "id": "ausbildung",
+            "headline": "Ausbildung",
+            "page": "Ausbildung.js",
+            "url": "ausbildung"
+        },
+        "8": {
+            "id": "kontakt",
+            "headline": "Kontakt",
+            "page": "Kontakt.js",
+            "url": "kontakt"
+        }
+    }
+}
