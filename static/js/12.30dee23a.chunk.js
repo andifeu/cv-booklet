@@ -1,0 +1,2 @@
+(this["webpackJsonpcv-booklet"]=this["webpackJsonpcv-booklet"]||[]).push([[12],{57:function(t,e,o){"use strict";o.r(e),e.default=o.p+"static/media/wood-bg.e17e4c29.jpg"}}]);
+//# sourceMappingURL=12.30dee23a.chunk.js.map
