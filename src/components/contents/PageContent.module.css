@@ -123,6 +123,11 @@
     background-image: url('../../images/giesecke-bg.jpeg');
 }
 
+.sources {
+    display: flex;
+    flex-direction: column;
+}
+
 /***********************************/
 
 .project-name {

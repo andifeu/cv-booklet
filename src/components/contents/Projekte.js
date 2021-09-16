@@ -4,9 +4,8 @@ import Card from '../widgets/Card';
 import { FaCheck } from 'react-icons/fa';
 
 export default class Projekte extends PageContent {
-
     /**
-     * @todo: 
+     * @todo:
      * - Projekt-Komponente erstellen
      */
 
@@ -176,35 +175,115 @@ export default class Projekte extends PageContent {
                     <Card image="cv-booklet.png" filterFrequency="0.2" />
                 </div>
                 <div className={this.css['project-desc']}>
-                    <div className={this.css.line}>
-                        <p>
-                            <b>Kunde:</b> privates Projekt
-                        </p>
+                    <p>
+                        <b>Kunde:</b> privates Projekt
+                    </p>
+                    <p>
+                        <b>Dauer:</b> August 2021 - September 2021
+                    </p>
+                    <b>Technologien:</b>
+                    <ul className={this.css.technologies}>
+                        <li>
+                            <FaCheck />
+                            <span>Javascript</span>
+                        </li>
+                        <li>
+                            <FaCheck />
+                            <span>React.js</span>
+                        </li>
+                    </ul>
+                </div>
+                <b>Beschreibung:</b>
+                <p>
+                    Entwicklung eines Lebenslaufs in Form eines 3D-Hefts auf
+                    Basis von Vanilla Javascript und React.js.
+                </p>
+                <div className={this.css.sources}>
+                    <div>
+                        <b>Code:</b>&nbsp;
+                        <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://github.com/andifeu/cv-booklet/tree/master"
+                        >
+                            Github
+                        </a>
                     </div>
-                    <div className={this.css.line}>
-                        <p>
-                            <b>Dauer:</b> August 2021 - September 2021
-                        </p>
+                    <div>
+                        <b>Demo:</b>&nbsp;
+                        <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://andifeu.github.io/cv-booklet/#/"
+                        >
+                            Github pages
+                        </a>
                     </div>
-                    <div className={this.css.line}>
-                        <b>Technologien:</b>
-                        <ul className={this.css.technologies}>
-                            <li>
-                                <FaCheck />
-                                <span>Javascript</span>
-                            </li>
-                            <li>
-                                <FaCheck />
-                                <span>React.js</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className={this.css.line}>
-                        <b>Beschreibung:</b>
-                        <p>
-                            Entwicklung eines Lebenslaufs in Form eines 3D-Hefts
-                            auf Basis von Vanilla Javascript und React.js.
-                        </p>
+                </div>
+            </>
+        );
+    }
+
+    render4() {
+        const imageStyles = {
+            width: '80%',
+            height: '40%',
+            padding: '5%'
+        };
+
+        return (
+            <>
+                <div className={this.css['project-name']}>
+                    <h3>WebRTC Video Call App</h3>
+                </div>
+                <div
+                    style={imageStyles}
+                    className={this.css['image-container']}
+                >
+                    <Card image="webrtc-flutter-1.jpg" filterFrequency="0.2" />
+                    <Card image="webrtc-flutter-2.jpg" filterFrequency="0.2" />
+                </div>
+                {/* <div
+                    style={imageStyles}
+                    className={this.css['image-container']}
+                >
+                    <Card image="webrtc-flutter-2.jpg" filterFrequency="0.2" />
+                </div> */}
+
+                <div className={this.css['project-desc']}>
+                    <p>
+                        <b>Kunde:</b> privates Projekt
+                    </p>
+                    <p>
+                        <b>Dauer:</b> März 2021 - Mai 2021
+                    </p>
+                    <b>Technologien:</b>
+                    <ul className={this.css.technologies}>
+                        <li>
+                            <FaCheck />
+                            <span>Dart & Flutter</span>
+                        </li>
+                        <li>
+                            <FaCheck />
+                            <span>WebRTC</span>
+                        </li>
+                    </ul>
+                </div>
+                <b>Beschreibung:</b>
+                <p>
+                    Entwicklung einer Peer-To-Peer Videotelefonie-App für
+                    Android und iOS auf Basis des Frameworks Flutter und Firebase (Backend).
+                </p>
+                <div className={this.css.sources}>
+                    <div>
+                        <b>Code:</b>&nbsp;
+                        <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://github.com/andifeu/webrtc_flutterclient"
+                        >
+                            Github
+                        </a>
                     </div>
                 </div>
             </>

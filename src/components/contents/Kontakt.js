@@ -19,7 +19,6 @@ export default class Ausbildung extends PageContent {
                         Tel.:&nbsp;
                         <a href="tel:+4915753093362">+49 1575 / 30 933 62</a>
                     </p>
-                    <p>Geburtsdatum: 09.05.1985</p>
                     <p>Adresse:</p>
                     <address>
                         Blumenweg 10

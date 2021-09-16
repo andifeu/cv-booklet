@@ -36,6 +36,12 @@
             "url": "projekte",
             "part": 3
         },{
+            "id": "projekte",
+            "headline": "Projekte",
+            "page": "Projekte.js",
+            "url": "projekte",
+            "part": 4
+        },{
             "id": "ausbildung",
             "headline": "Ausbildung",
             "page": "Ausbildung.js",
