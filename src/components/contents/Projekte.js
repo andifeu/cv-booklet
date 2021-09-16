@@ -1,292 +1,197 @@
 import PageContent from './PageContent';
-import Card from '../widgets/Card';
-
-import { FaCheck } from 'react-icons/fa';
+import Project from '../Project';
 
 export default class Projekte extends PageContent {
-    /**
-     * @todo:
-     * - Projekt-Komponente erstellen
-     */
-
     render1() {
-        const imageStyles = {
-            width: '40%',
-            height: '26%',
+        const image = {
+            name: ['ospneo.png'],
+            bgCSS: 'ospneo-bg',
+            style: {
+                width: '40%',
+                height: '26%',
+            },
         };
+
+        const customer = (
+            <>
+                <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.microdoc.com/"
+                >
+                    MicroDoc Computersysteme GmbH
+                </a>{' '}
+                als Dienstleister für die{' '}
+                <a target="_blank" rel="noreferrer" href="https://www.f-i.de/">
+                    Finanz Informatik GmbH & Co. KG.
+                </a>
+            </>
+        );
+
+        const technologies = ['Javascript', 'HTML5', 'CSS3'];
+
+        const desc = (
+            <>
+                Mitentwicklung des Javascript UI-Frameworks OSPlus_neo, für den
+                Einsatz bei Onlinebanking-Frontends, Bankberater-Software und
+                inzwischen auch Geldautomaten:
+                <br />
+                <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://www.youtube.com/watch?v=3RqmiVekSNA"
+                >
+                    Produktvideo
+                </a>
+            </>
+        );
 
         return (
             <>
-                <div
-                    className={`${this.css['ospneo-bg']} ${this.css['project-bg-image']}`}
-                ></div>
                 <h2>{this.headline}</h2>
-                <div className={this.css['project-name']}>
-                    <h3>OSPlus_neo</h3>
-                </div>
-                <div
-                    style={imageStyles}
-                    className={this.css['image-container']}
-                >
-                    <Card image="ospneo.png" filterFrequency="0.2" />
-                </div>
-                <div className={this.css['project-desc']}>
-                    <div className={this.css.line}>
-                        <p>
-                            <b>Kunde:</b>{' '}
-                            <a
-                                target="_blank"
-                                rel="noreferrer"
-                                href="https://www.microdoc.com/"
-                            >
-                                MicroDoc Computersysteme GmbH
-                            </a>{' '}
-                            als Dienstleister für die{' '}
-                            <a
-                                target="_blank"
-                                rel="noreferrer"
-                                href="https://www.f-i.de/"
-                            >
-                                Finanz Informatik GmbH & Co. KG.
-                            </a>
-                        </p>
-                    </div>
-                    <div className={this.css.line}>
-                        <p>
-                            <b>Dauer:</b> April 2016 - Februar 2021
-                        </p>
-                    </div>
-                    <div className={this.css.line}>
-                        <b>Technologien:</b>
-                        <ul className={this.css.technologies}>
-                            <li>
-                                <FaCheck />
-                                <span>Javascript</span>
-                            </li>
-                            <li>
-                                <FaCheck />
-                                <span>HTML5</span>
-                            </li>
-                            <li>
-                                <FaCheck />
-                                <span>CSS3</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className={this.css.line}>
-                        <b>Beschreibung:</b>
-                        <p>
-                            Mitentwicklung des Javascript UI-Frameworks
-                            OSPlus_neo, für den Einsatz bei
-                            Onlinebanking-Frontends, Bankberater-Software und
-                            inzwischen auch Geldautomaten:
-                            <br />
-                            <a
-                                rel="noreferrer"
-                                target="_blank"
-                                href="https://www.youtube.com/watch?v=3RqmiVekSNA"
-                            >
-                                Produktvideo
-                            </a>
-                        </p>
-                    </div>
-                </div>
+                <Project
+                    projectname="OSPlus_neo"
+                    image={image}
+                    customer={customer}
+                    duration="April 2016 - Februar 2021"
+                    technologies={technologies}
+                    description={desc}
+                />
             </>
         );
     }
 
     render2() {
-        return (
+        const name = (
             <>
-                <div
-                    className={`${this.css['giesecke-bg']} ${this.css['project-bg-image']}`}
-                ></div>
-                <div className={this.css['project-name']}>
-                    <h3>
-                        Intranet Telefonbuch
-                        <br />-<br />
-                        Giesecke+Devrient
-                    </h3>
-                </div>
-                <div className={this.css['image-container']}>
-                    <Card image="giesecke.jpg" filterFrequency="0.2" />
-                </div>
-                <div className={this.css['project-desc']}>
-                    <div className={this.css.line}>
-                        <p>
-                            <b>Kunde:</b>{' '}
-                            <a
-                                target="_blank"
-                                rel="noreferrer"
-                                href="https://www.gi-de.com/"
-                            >
-                                Giesecke & Devrient
-                            </a>
-                        </p>
-                    </div>
-                    <div className={this.css.line}>
-                        <p>
-                            <b>Dauer:</b> September 2015 - Dezember 2015
-                        </p>
-                    </div>
-                    <div className={this.css.line}>
-                        <b>Technologien:</b>
-                        <ul className={this.css.technologies}>
-                            <li>
-                                <FaCheck />
-                                <span>PHP</span>
-                            </li>
-                            <li>
-                                <FaCheck />
-                                <span>Javascript</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className={this.css.line}>
-                        <b>Beschreibung:</b>
-                        <p>
-                            Entwicklung eines leichtgewichtigen PHP-MVC
-                            Frameworks zur internen Verwendung für G&D.
-                            <br />
-                            Portierung des alten Intranet-Telefonbuchs auf das
-                            neue System.
-                        </p>
-                    </div>
-                </div>
+                Intranet Telefonbuch
+                <br />-<br />
+                Giesecke+Devrient
             </>
+        );
+
+        const image = {
+            name: ['giesecke.jpg'],
+            bgCSS: 'giesecke-bg'
+        };
+
+        const customer = (
+            <a target="_blank" rel="noreferrer" href="https://www.gi-de.com/">
+                Giesecke & Devrient
+            </a>
+        );
+
+        const desc = (
+            <>
+                Entwicklung eines leichtgewichtigen PHP-MVC Frameworks zur
+                internen Verwendung für G&D.
+                <br />
+                Portierung des alten Intranet-Telefonbuchs auf das neue System.
+            </>
+        );
+
+        return (
+            <Project
+                projectname={name}
+                image={image}
+                customer={customer}
+                duration="September 2015 - Dezember 2015"
+                technologies={['PHP', 'Javascript']}
+                description={desc}
+            />
         );
     }
 
     render3() {
-        const imageStyles = {
-            width: '80%',
-            height: '35%',
+        const image = {
+            name: ['cv-booklet.png'],
+            style: {
+                width: '80%',
+                height: '35%',
+            },
         };
 
-        return (
+        const desc = (
             <>
-                <div className={this.css['project-name']}>
-                    <h3>CV Booklet</h3>
-                </div>
-                <div
-                    style={imageStyles}
-                    className={this.css['image-container']}
-                >
-                    <Card image="cv-booklet.png" filterFrequency="0.2" />
-                </div>
-                <div className={this.css['project-desc']}>
-                    <p>
-                        <b>Kunde:</b> privates Projekt
-                    </p>
-                    <p>
-                        <b>Dauer:</b> August 2021 - September 2021
-                    </p>
-                    <b>Technologien:</b>
-                    <ul className={this.css.technologies}>
-                        <li>
-                            <FaCheck />
-                            <span>Javascript</span>
-                        </li>
-                        <li>
-                            <FaCheck />
-                            <span>React.js</span>
-                        </li>
-                    </ul>
-                </div>
-                <b>Beschreibung:</b>
-                <p>
-                    Entwicklung eines Lebenslaufs in Form eines 3D-Hefts auf
-                    Basis von Vanilla Javascript und React.js.
-                </p>
-                <div className={this.css.sources}>
-                    <div>
-                        <b>Code:</b>&nbsp;
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://github.com/andifeu/cv-booklet/tree/master"
-                        >
-                            Github
-                        </a>
-                    </div>
-                    <div>
-                        <b>Demo:</b>&nbsp;
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://andifeu.github.io/cv-booklet/#/"
-                        >
-                            Github pages
-                        </a>
-                    </div>
-                </div>
+                Entwicklung eines Lebenslaufs in Form eines 3D-Hefts auf Basis
+                von Vanilla Javascript und React.js.
             </>
+        );
+
+        const code = (
+            <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://github.com/andifeu/cv-booklet/tree/master"
+            >
+                Github
+            </a>
+        );
+
+        const demo = (
+            <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://andifeu.github.io/cv-booklet/#/"
+            >
+                Github pages
+            </a>
+        );
+
+        return (
+            <Project
+                projectname="CV Booklet"
+                image={image}
+                customer="privates Projekt"
+                duration="August 2021 - September 2021"
+                technologies={['Javascript', 'React.js']}
+                description={desc}
+                code={code}
+                demo={demo}
+            />
         );
     }
 
     render4() {
-        const imageStyles = {
-            width: '80%',
-            height: '40%',
-            padding: '5%'
+        const image = {
+            name: ['webrtc-flutter-1.jpg', 'webrtc-flutter-2.jpg'],
+            styles: {
+                width: '80%',
+                height: '40%',
+                padding: '5%',
+            }
         };
 
-        return (
+        const desc = (
             <>
-                <div className={this.css['project-name']}>
-                    <h3>WebRTC Video Call App</h3>
-                </div>
-                <div
-                    style={imageStyles}
-                    className={this.css['image-container']}
-                >
-                    <Card image="webrtc-flutter-1.jpg" filterFrequency="0.2" />
-                    <Card image="webrtc-flutter-2.jpg" filterFrequency="0.2" />
-                </div>
-                {/* <div
-                    style={imageStyles}
-                    className={this.css['image-container']}
-                >
-                    <Card image="webrtc-flutter-2.jpg" filterFrequency="0.2" />
-                </div> */}
-
-                <div className={this.css['project-desc']}>
-                    <p>
-                        <b>Kunde:</b> privates Projekt
-                    </p>
-                    <p>
-                        <b>Dauer:</b> März 2021 - Mai 2021
-                    </p>
-                    <b>Technologien:</b>
-                    <ul className={this.css.technologies}>
-                        <li>
-                            <FaCheck />
-                            <span>Dart & Flutter</span>
-                        </li>
-                        <li>
-                            <FaCheck />
-                            <span>WebRTC</span>
-                        </li>
-                    </ul>
-                </div>
-                <b>Beschreibung:</b>
-                <p>
-                    Entwicklung einer Peer-To-Peer Videotelefonie-App für
-                    Android und iOS auf Basis des Frameworks Flutter und Firebase (Backend).
-                </p>
-                <div className={this.css.sources}>
-                    <div>
-                        <b>Code:</b>&nbsp;
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://github.com/andifeu/webrtc_flutterclient"
-                        >
-                            Github
-                        </a>
-                    </div>
-                </div>
+                Entwicklung einer Peer-To-Peer Videotelefonie-App für Android
+                und iOS auf Basis des Frameworks Flutter und Firebase (Backend).
             </>
         );
+
+        const code = (
+            <>
+                <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://github.com/andifeu/webrtc_flutterclient"
+                >
+                    Github
+                </a>
+            </>
+        );
+
+        return (
+            <Project
+                projectname="WebRTC Video Call App"
+                image={image}
+                customer="privates Projekt"
+                duration="März 2021 - Mai 2021"
+                technologies={['Flutter', 'Dart', 'WebRTC']}
+                description={desc}
+                code={code}
+            />
+        );
+
     }
 }
