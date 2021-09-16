@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
-import Page from './pages/Page';
+import Page from './components/Page';
 import Menu from './components/Menu';
 import Toolkit from './utils/Toolkit';
 
@@ -10,7 +10,7 @@ import Config from './config/pageconfig.json';
 import styles from './Book.module.css';
 
 class Book extends React.Component {
-    
+
     numPages = 0;
 
     numSites = 0;
@@ -34,31 +34,27 @@ class Book extends React.Component {
     }
 
     goToPageByUrl(url) {
+        const pages = Config.pages;
+        let i = 0, j = 0;
+
         if (url.indexOf('/') === 0) {
             url = url.substr(1);
         }
-        for (const [key, value] of Object.entries(Config.pages)) {
-            let int = null,
-                i = 0;
-            const pageIndex = parseInt(key, 10);
-            const numPages = Math.floor(pageIndex / 2);
 
-            if (int !== null || url !== value.url) {
-                continue;
+        while (i < pages.length - 1) {
+            if (url === pages[i].url) {
+                break;
             }
-
-            int = setInterval(() => {
-                if (i < numPages) {
-                    this.pageAnimation(i, false);
-                    i++;
-                } else {
-                    clearInterval(int);
-                    int = null;
-                    i = 0;
-                }
-            }, 300);
-            break;
+            i++;
         }
+
+        const numPagesToTurn = Math.floor((i + 1) / 2);
+        setInterval(() => {
+            if (j < numPagesToTurn) {
+                this.pageAnimation(j, false);
+                j++;
+            }
+        }, 300);
     }
 
     componentDidMount() {
@@ -92,7 +88,7 @@ class Book extends React.Component {
             }
             directionUp = false;
             pageIndex--;
-        } else if (pageIndex === this.numSites - 1) {
+        } else if (pageIndex === this.numSites) {
             return;
         }
 
@@ -136,7 +132,6 @@ class Book extends React.Component {
 
         page.animate((page) => {
             if (!this.isAnimationActive()) {
-
                 if (updateURL) {
                     let pageNum = page.pageNum;
                     if (!page.isFrontActive()) {
@@ -169,7 +164,7 @@ class Book extends React.Component {
         for (let i = 0; i < this.numSites; i++) {
             const pageClickListener = (e) => {
                 const selection = document.getSelection();
-                if (selection.type === 'Range') {
+                if (selection.type.toLowerCase() === 'range') {
                     return;
                 }
 
@@ -220,10 +215,14 @@ function getNumberOfPages() {
 
 function setUrlForPageNum(history, pageNum) {
     let currentChapter;
-    for (let i = 0; i <= pageNum; i++) {
+    for (let i = 0; i < pageNum; i++) {
         if (Config.pages[i]) {
             currentChapter = Config.pages[i];
         }
+    }
+
+    if (currentChapter.url === '') {
+        currentChapter.url = '/';
     }
 
     if (currentChapter && currentChapter.url !== history.location.pathname) {

@@ -5,7 +5,7 @@
             "id": "about",
             "headline": "About",
             "page": "About.js",
-            "url": "/"
+            "url": ""
         },{
             "id": "kompetenzen",
             "part": 1,
@@ -19,7 +19,6 @@
             "url": "kompetenzen"
         },{
             "id": "projekte",
-            "pageNum": 4,
             "headline": "Projekte",
             "page": "Projekte.js",
             "url": "projekte",
