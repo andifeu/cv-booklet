@@ -10,7 +10,8 @@ import Config from './config/pageconfig.json';
 import styles from './Book.module.css';
 
 class Book extends React.Component {
-    numPages = 14;
+    
+    numPages = 0;
 
     numSites = 0;
 
@@ -24,6 +25,7 @@ class Book extends React.Component {
 
     constructor(props) {
         super(props);
+        this.numPages = getNumberOfPages();
         this.numSites = Math.ceil(this.numPages / 2);
     }
 
@@ -209,6 +211,11 @@ class Book extends React.Component {
             </>
         );
     }
+}
+
+function getNumberOfPages() {
+    const pages = Object.values(Config.pages);
+    return pages.length;
 }
 
 function setUrlForPageNum(history, pageNum) {
