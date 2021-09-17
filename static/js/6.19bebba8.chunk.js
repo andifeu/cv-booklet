@@ -1,0 +1,2 @@
+(this["webpackJsonpcv-booklet"]=this["webpackJsonpcv-booklet"]||[]).push([[6],{51:function(e,t,c){"use strict";c.r(t),t.default=c.p+"static/media/giesecke-bg.681f44ce.jpeg"}}]);
+//# sourceMappingURL=6.19bebba8.chunk.js.map
