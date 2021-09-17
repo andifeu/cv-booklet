@@ -1,5 +1,4 @@
 {
-    "mode": "local",
     "pages": [
         {
             "id": "about",
@@ -41,6 +40,11 @@
             "page": "Projekte.js",
             "url": "projekte",
             "part": 4
+        },{
+            "id": "career",
+            "headline": "Beruflicher Werdegang",
+            "page": "career.js",
+            "url": "werdegang"
         },{
             "id": "ausbildung",
             "headline": "Ausbildung",

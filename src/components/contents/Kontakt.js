@@ -1,7 +1,14 @@
-
 import PageContent from './PageContent';
 
 export default class Ausbildung extends PageContent {
+    
+    number = 0x47889b788f2;
+
+    callNumber(e) {
+        const intVal = parseInt(this.number, 10);
+        e.preventDefault();
+        window.location.href = 'tel://+' + intVal;
+    }
 
     render() {
         return (
@@ -17,7 +24,12 @@ export default class Ausbildung extends PageContent {
                     </p>
                     <p>
                         Tel.:&nbsp;
-                        <a href="tel:+4915753093362">+49 1575 / 30 933 62</a>
+                        <a
+                            onClick={(e) => this.callNumber(e)}
+                            href="#"
+                        >
+                            0 1575 / 30 933 62
+                        </a>
                     </p>
                     <p>Adresse:</p>
                     <address>

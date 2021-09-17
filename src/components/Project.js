@@ -34,7 +34,7 @@ export default function Project(props) {
                     }`}
                 ></div>
             )}
-            <div className={css['project-name']}>
+            <div className={css.subheadline}>
                 <h3>{props.projectname}</h3>
             </div>
             {images.length > 0 && (

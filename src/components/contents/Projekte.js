@@ -2,6 +2,7 @@ import PageContent from './PageContent';
 import Project from '../Project';
 
 export default class Projekte extends PageContent {
+    
     render1() {
         const image = {
             name: ['ospneo.png'],
@@ -155,7 +156,7 @@ export default class Projekte extends PageContent {
     render4() {
         const image = {
             name: ['webrtc-flutter-1.jpg', 'webrtc-flutter-2.jpg'],
-            styles: {
+            style: {
                 width: '80%',
                 height: '40%',
                 padding: '5%',
