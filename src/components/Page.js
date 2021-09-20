@@ -54,6 +54,7 @@ export default class Page extends React.Component {
 
         keyframes1 = [2, -90];
         keyframes2 = [-90, -182];
+
         if (!this.isFrontActive()) {
             keyframes1 = [-182, -90];
             keyframes2 = [-90, 2];

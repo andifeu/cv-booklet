@@ -1,7 +1,6 @@
 import PageContent from './PageContent';
 
 export default class Ausbildung extends PageContent {
-    
     number = 0x47889b788f2;
 
     callNumber(e) {
@@ -14,29 +13,32 @@ export default class Ausbildung extends PageContent {
         return (
             <>
                 <h2>{this.headline}</h2>
-                <div>
-                    <p>Andreas Feuerstein - Software Entwickler</p>
-                    <p>
-                        Email:&nbsp;
-                        <a href="mailto:andreas.feuerstein@mail.de">
-                            andreas.feuerstein@mail.de
-                        </a>
-                    </p>
-                    <p>
-                        Tel.:&nbsp;
-                        <a
-                            onClick={(e) => this.callNumber(e)}
-                            href="#"
-                        >
-                            0 1575 / 30 933 62
-                        </a>
-                    </p>
-                    <p>Adresse:</p>
-                    <address>
-                        Blumenweg 10
-                        <br />
-                        88319 Aitrach
-                    </address>
+                <p>Andreas Feuerstein - Software Entwickler</p>
+                <p>
+                    Email:&nbsp;
+                    <a href="mailto:andreas.feuerstein@mail.de">
+                        andreas.feuerstein@mail.de
+                    </a>
+                </p>
+                <p>
+                    Tel.:&nbsp;
+                    <a onClick={(e) => this.callNumber(e)} href="/#">
+                        0 1575 / 30 933 62
+                    </a>
+                </p>
+                <div className={this.css.address}>
+                    <span>Adresse:</span>
+                    <address>Blumenweg 10, 88319 Aitrach</address>
+                </div>
+                <div className={this.css.line}>
+                    Sources und Code:&nbsp;
+                    <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://github.com/andifeu"
+                    >
+                        Github
+                    </a>
                 </div>
             </>
         );

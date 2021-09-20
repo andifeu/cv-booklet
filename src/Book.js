@@ -203,6 +203,7 @@ class Book extends React.Component {
                     </div>
                 </div>
                 {pages}
+                <div className={styles.back}></div>
             </>
         );
     }

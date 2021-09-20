@@ -16,6 +16,7 @@
     width: 90%;
     height: 90%;
     background-size: cover;
+    background-position-y: center;
     top: 10%;
     left: 5%;
 }

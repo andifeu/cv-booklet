@@ -63,7 +63,7 @@ export default class Card extends React.Component {
         const bgImageCSS = {
             backgroundImage: `url(${this.image})`,
         };
-
+        
         return (
             <div className={css['card-widget']}>
                 <div ref={this.filterRef} className={css['card-bg']}></div>

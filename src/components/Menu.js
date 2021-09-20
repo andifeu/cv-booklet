@@ -15,7 +15,7 @@ export default function Menu() {
                             <Link to={Config.pages[key]['url']}>
                                 {Config.pages[key]['headline']}
                             </Link>
-                            <span>{key}</span>
+                            <span>{parseInt(key, 10) + 1}</span>
                         </li>
                     )
                 )}

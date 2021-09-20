@@ -145,5 +145,10 @@
 
 .tasks {
     padding: 0;
+}
 
+/**************** Kontakt ****************/
+
+.address p {
+    padding: 0;
 }
