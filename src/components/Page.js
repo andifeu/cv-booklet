@@ -65,10 +65,10 @@ export default class Page extends React.Component {
         animation = animate.call(this, pageDom, ...keyframes1);
         animation.addEventListener('finish', () => {
             pageDom.style.zIndex = zIndex;
-            animation = animate.call(this, pageDom, ...keyframes2);
+
+            animation = animate.call(this, pageDom, ...keyframes2, this.siteIndex);
             animation.addEventListener('finish', () => {
                 this.setFrontActive(!this.frontActive);
-
                 this.animationActive = false;
                 if (typeof afterAnimationFinished === 'function') {
                     afterAnimationFinished(this);
@@ -104,7 +104,7 @@ export default class Page extends React.Component {
     }
 }
 
-function animate(domNode, degFrom, degTo) {
+function animate(domNode, degFrom, degTo, siteIndex) {
     return domNode.animate(
         [
             { transform: 'rotateY(' + degFrom + 'deg)' },

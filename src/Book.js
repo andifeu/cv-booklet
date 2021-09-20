@@ -124,12 +124,19 @@ class Book extends React.Component {
             this.activePageIndex++;
         }
 
-        if (!animationActive && Toolkit.isFirefox()) {
+        if (!animationActive) {
             for (let i = 0; i < this.pageRefs.length; i++) {
-                this.pageRefs[i].ref.current.style.display = '';
+                if (Toolkit.isFirefox()) {
+                    this.pageRefs[i].ref.current.style.display = '';
+                }
+                /**
+                 * @todo: Nur für Safari
+                 */
+                this.pageRefs[i].backRef.current.ref.current.style.transform = 'rotateY(180deg) translateZ(0.' + i + 'px)';
             }
         }
 
+        page.backRef.current.ref.current.style.transform = 'rotateY(180deg) translateZ(0.' + this.pageRefs.length + 'px)';
         page.animate((page) => {
             if (!this.isAnimationActive()) {
                 if (updateURL) {
