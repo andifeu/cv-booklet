@@ -1,0 +1,2 @@
+(this["webpackJsonpcv-booklet"]=this["webpackJsonpcv-booklet"]||[]).push([[12],{60:function(t,e,c){"use strict";c.r(e),e.default=c.p+"static/media/webrtc-flutter-2.863ee114.jpg"}}]);
+//# sourceMappingURL=12.329774fe.chunk.js.map
