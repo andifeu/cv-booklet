@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/cv-booklet/static/css/main.b3dbb5b2.chunk.css",
+    "main.css": "/cv-booklet/static/css/main.a14942cd.chunk.css",
     "main.js": "/cv-booklet/static/js/main.6a259fd3.chunk.js",
     "main.js.map": "/cv-booklet/static/js/main.6a259fd3.chunk.js.map",
-    "runtime-main.js": "/cv-booklet/static/js/runtime-main.d594a87b.js",
-    "runtime-main.js.map": "/cv-booklet/static/js/runtime-main.d594a87b.js.map",
+    "runtime-main.js": "/cv-booklet/static/js/runtime-main.4dd122a6.js",
+    "runtime-main.js.map": "/cv-booklet/static/js/runtime-main.4dd122a6.js.map",
     "static/js/2.3d8ba141.chunk.js": "/cv-booklet/static/js/2.3d8ba141.chunk.js",
     "static/js/2.3d8ba141.chunk.js.map": "/cv-booklet/static/js/2.3d8ba141.chunk.js.map",
     "static/js/3.2720a44b.chunk.js": "/cv-booklet/static/js/3.2720a44b.chunk.js",
@@ -21,8 +21,8 @@
     "static/js/8.8b53a110.chunk.js.map": "/cv-booklet/static/js/8.8b53a110.chunk.js.map",
     "static/js/9.e30cc9f9.chunk.js": "/cv-booklet/static/js/9.e30cc9f9.chunk.js",
     "static/js/9.e30cc9f9.chunk.js.map": "/cv-booklet/static/js/9.e30cc9f9.chunk.js.map",
-    "static/js/10.d44f2c26.chunk.js": "/cv-booklet/static/js/10.d44f2c26.chunk.js",
-    "static/js/10.d44f2c26.chunk.js.map": "/cv-booklet/static/js/10.d44f2c26.chunk.js.map",
+    "static/js/10.abcafbfa.chunk.js": "/cv-booklet/static/js/10.abcafbfa.chunk.js",
+    "static/js/10.abcafbfa.chunk.js.map": "/cv-booklet/static/js/10.abcafbfa.chunk.js.map",
     "static/js/11.f2300057.chunk.js": "/cv-booklet/static/js/11.f2300057.chunk.js",
     "static/js/11.f2300057.chunk.js.map": "/cv-booklet/static/js/11.f2300057.chunk.js.map",
     "static/js/12.329774fe.chunk.js": "/cv-booklet/static/js/12.329774fe.chunk.js",
@@ -30,7 +30,7 @@
     "static/js/13.06187cc3.chunk.js": "/cv-booklet/static/js/13.06187cc3.chunk.js",
     "static/js/13.06187cc3.chunk.js.map": "/cv-booklet/static/js/13.06187cc3.chunk.js.map",
     "index.html": "/cv-booklet/index.html",
-    "static/css/main.b3dbb5b2.chunk.css.map": "/cv-booklet/static/css/main.b3dbb5b2.chunk.css.map",
+    "static/css/main.a14942cd.chunk.css.map": "/cv-booklet/static/css/main.a14942cd.chunk.css.map",
     "static/js/2.3d8ba141.chunk.js.LICENSE.txt": "/cv-booklet/static/js/2.3d8ba141.chunk.js.LICENSE.txt",
     "static/js/main.6a259fd3.chunk.js.LICENSE.txt": "/cv-booklet/static/js/main.6a259fd3.chunk.js.LICENSE.txt",
     "static/media/avira-logo.png": "/cv-booklet/static/media/avira-logo.53612c46.png",
@@ -40,15 +40,15 @@
     "static/media/giesecke-bg.jpeg": "/cv-booklet/static/media/giesecke-bg.681f44ce.jpeg",
     "static/media/ospneo-bg.png": "/cv-booklet/static/media/ospneo-bg.9fb98dda.png",
     "static/media/ospneo.png": "/cv-booklet/static/media/ospneo.bfd5b6fc.png",
-    "static/media/portrait.jpg": "/cv-booklet/static/media/portrait.75d58403.jpg",
+    "static/media/portrait.jpg": "/cv-booklet/static/media/portrait.2f53b79f.jpg",
     "static/media/webrtc-flutter-1.jpg": "/cv-booklet/static/media/webrtc-flutter-1.f2b91d5b.jpg",
     "static/media/webrtc-flutter-2.jpg": "/cv-booklet/static/media/webrtc-flutter-2.863ee114.jpg",
     "static/media/wood-bg.jpg": "/cv-booklet/static/media/wood-bg.e17e4c29.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d594a87b.js",
+    "static/js/runtime-main.4dd122a6.js",
     "static/js/2.3d8ba141.chunk.js",
-    "static/css/main.b3dbb5b2.chunk.css",
+    "static/css/main.a14942cd.chunk.css",
     "static/js/main.6a259fd3.chunk.js"
   ]
 }
