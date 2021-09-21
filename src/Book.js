@@ -140,7 +140,9 @@ class Book extends React.Component {
             }
         }
 
-        page.backRef.current.ref.current.style.transform = 'rotateY(180deg) translateZ(0.' + this.pageRefs.length + 'px)';
+        if (this.browserInfo.name === 'safari') {
+            page.backRef.current.ref.current.style.transform = 'rotateY(180deg) translateZ(0.' + this.pageRefs.length + 'px)';
+        }
         page.animate((page) => {
             if (!this.isAnimationActive()) {
                 if (updateURL) {

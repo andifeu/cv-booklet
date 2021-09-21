@@ -13,14 +13,13 @@
 
 .page-front {
     transform: rotateY(0deg);
+    -webkit-backface-visibility: hidden;
     border-left: 1px dotted var(--book-bg-color);
-    /* z-index: 5; */
 }
 
 .page-back {
     /* transform: rotateY(180deg); */
     transform: rotateY(180deg) translateZ(1px);
-    /* z-index: 15; */
 }
 
 .page-content-header,
