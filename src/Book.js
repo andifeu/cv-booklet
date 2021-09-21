@@ -3,11 +3,12 @@ import { withRouter } from 'react-router';
 
 import Page from './components/Page';
 import Menu from './components/Menu';
-import Toolkit from './utils/Toolkit';
 
 import Config from './config/pageconfig.json';
 
 import styles from './Book.module.css';
+
+import { detect } from 'detect-browser';
 
 class Book extends React.Component {
 
@@ -23,10 +24,13 @@ class Book extends React.Component {
 
     animationActive = false;
 
+    browserInfo = null;
+
     constructor(props) {
         super(props);
         this.numPages = getNumberOfPages();
         this.numSites = Math.ceil(this.numPages / 2);
+        this.browserInfo = detect();
     }
 
     isAnimationActive() {
@@ -126,13 +130,13 @@ class Book extends React.Component {
 
         if (!animationActive) {
             for (let i = 0; i < this.pageRefs.length; i++) {
-                if (Toolkit.isFirefox()) {
+                if (this.browserInfo.name === 'firefox') {
                     this.pageRefs[i].ref.current.style.display = '';
                 }
-                /**
-                 * @todo: Nur für Safari
-                 */
-                this.pageRefs[i].backRef.current.ref.current.style.transform = 'rotateY(180deg) translateZ(0.' + i + 'px)';
+
+                if (this.browserInfo.name === 'safari') {
+                    this.pageRefs[i].backRef.current.ref.current.style.transform = 'rotateY(180deg) translateZ(0.' + i + 'px)';
+                }
             }
         }
 
@@ -151,7 +155,7 @@ class Book extends React.Component {
                  * Firefox fix:
                  * z-order of pages broken when using z-index and transform-style "preserve-3d"
                  */
-                if (Toolkit.isFirefox()) {
+                if (this.browserInfo.name === 'firefox') {
                     for (let i = 0; i < this.pageRefs.length; i++) {
                         if (
                             i !== this.activePageIndex - 1 &&

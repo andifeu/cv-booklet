@@ -6,8 +6,4 @@ export default class Toolkit {
         }
         return window.setTimeout(functionToCall, delay);
     }
-
-    static isFirefox() {
-        return navigator.userAgent.indexOf("Firefox") > -1;
-    }
 }

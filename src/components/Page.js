@@ -1,7 +1,7 @@
 import React from 'react';
-import Toolkit from '../utils/Toolkit';
 import PageContent from './ContentContainer';
 
+import { detect } from 'detect-browser';
 import styles from './Page.module.css';
 
 /**
@@ -23,6 +23,8 @@ export default class Page extends React.Component {
 
     siteIndex = 0;
 
+    browserInfo = null;
+
     constructor(props) {
         super(props);
         this.siteIndex = props.siteIndex;
@@ -31,6 +33,7 @@ export default class Page extends React.Component {
         this.ref = React.createRef();
         this.frontRef = React.createRef();
         this.backRef = React.createRef();
+        this.browserInfo = detect();
     }
 
     setFrontActive(activeState) {
@@ -54,10 +57,18 @@ export default class Page extends React.Component {
 
         keyframes1 = [2, -90];
         keyframes2 = [-90, -182];
+        if (this.browserInfo.name === 'safari') {
+            keyframes1 = [0, -90];
+            keyframes2 = [-90, -180];
+        }
 
         if (!this.isFrontActive()) {
             keyframes1 = [-182, -90];
             keyframes2 = [-90, 2];
+            if (this.browserInfo.name === 'safari') {
+                keyframes1 = [-180, -90];
+                keyframes2 = [-90, 0];
+            }
             zIndex = (this.numSites - this.siteIndex) * 10;
         }
 
@@ -82,7 +93,11 @@ export default class Page extends React.Component {
             zIndex: (this.numSites - this.siteIndex) * 10,
         };
 
-        if (this.props.siteIndex > 0 && Toolkit.isFirefox()) {
+        if (this.browserInfo.name === 'safari') {
+            inlineCSS.transform = 'rotate(0)';
+        }
+
+        if (this.props.siteIndex > 0 && this.browserInfo.name === 'firefox') {
             inlineCSS.display = 'none';
         }
 
