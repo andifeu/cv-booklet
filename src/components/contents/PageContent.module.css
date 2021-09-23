@@ -147,8 +147,25 @@
     padding: 0;
 }
 
+/**************** Werdegang ****************/
+
+.career-step {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 5%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
+
+.career-step .description-list li {
+    list-style: disc;
+}
+
+
 /**************** Kontakt ****************/
 
 .address p {
     padding: 0;
 }
+

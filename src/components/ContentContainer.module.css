@@ -53,12 +53,11 @@
 
 
 .page-content-text {
-    height: 96%;
+    height: 97%;
     width: 100%;
     position: absolute;
     left: 0;
-    top: 2%;
-    /* background-color: white; */
+    top: 1%;
     background-color: var(--body-bg-color);
     padding-left: var(--page-edge-padding);
     padding-right: var(--page-edge-padding);

@@ -5,6 +5,7 @@ import Kompetenzen from './contents/Kompetenzen';
 import Ausbildung from './contents/Ausbildung';
 import Projekte from './contents/Projekte';
 import Kontakt from './contents/Kontakt';
+import Career from './contents/Career';
 
 const Components = {
     'about': About,
@@ -12,6 +13,7 @@ const Components = {
     'ausbildung': Ausbildung,
     'projekte': Projekte,
     'kontakt': Kontakt,
+    'career': Career
 }
 
 export function getComponentByPageNum(pageNum) {

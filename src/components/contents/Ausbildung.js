@@ -19,8 +19,7 @@ export default class Ausbildung extends PageContent {
                 </div>
 
                 <div
-                    style={imageStyle}
-                    className={this.css['image-container']}
+                    style={imageStyle} className={this.css['image-container']}
                 >
                     <Card image="avira-logo.png" filterFrequency="0.2" />
                 </div>

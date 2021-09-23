@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
+import { detect } from 'detect-browser';
 
 import Page from './components/Page';
 import Menu from './components/Menu';
@@ -7,8 +8,6 @@ import Menu from './components/Menu';
 import Config from './config/pageconfig.json';
 
 import styles from './Book.module.css';
-
-import { detect } from 'detect-browser';
 
 class Book extends React.Component {
 

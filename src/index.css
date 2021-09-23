@@ -97,9 +97,4 @@ a {
     max-width: var(--max-book-width);
     max-height: var(--max-book-height);
     vertical-align: middle;
-
-    /* font-size: min(
-        calc(var(--base-size) * 3),
-        calc(var(--max-book-width) * var(--size-offset-default))
-    ); */
 }
