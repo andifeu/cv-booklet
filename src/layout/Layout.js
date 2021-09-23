@@ -1,20 +1,36 @@
+import { useContext } from 'react';
 import Book from '../Book';
+import Layer from '../components/Layer';
 import Menu from '../components/Menu';
+import ImageContext from '../store/ImageContext';
 
 import css from './Layout.module.css';
 
 export default function Layout(props) {
+    const context = useContext(ImageContext);
+    let perspectiveClass = 'book';
+    let visibility = 'hide';
+
+    if (context.isDetailImageShown()) {
+        perspectiveClass = 'book image-shown';
+        visibility = 'show'
+    }
+
     return (
         <>
             <aside className={css['sidebar']}>
                 <Menu />
             </aside>
-            <div className={css.book}>
+            <div className={`${css.book} ${perspectiveClass}`}>
+                {context.isDetailImageShown() && <Layer />}
                 <div className={css.cover}>
                     <div className={css['page-container']}>
                         <Book />
                     </div>
                 </div>
+            </div>
+            <div className={`detail-image ${visibility}`}>
+                <img src={context.getDetailImage()} />
             </div>
         </>
     );

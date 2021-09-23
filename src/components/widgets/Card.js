@@ -1,11 +1,17 @@
 import React from 'react';
+import { detect } from 'detect-browser';
+import ImageContext from '../../store/ImageContext';
 
 import css from './Card.module.css';
 import Toolkit from '../../utils/Toolkit';
 
-import { detect } from 'detect-browser';
+
+
 
 export default class Card extends React.Component {
+
+    static contextType = ImageContext;
+
     breakpoint = 620;
 
     useFilter = null;
@@ -63,16 +69,21 @@ export default class Card extends React.Component {
         });
     }
 
-    getImageInfo() {
-        if (!this.props.description) {
-            return null;
-        }
-        return (
-            <div className={css.info}>
-                {this.props.title ? <h2>{this.props.title}</h2> : null}
-                <p>{this.props.description}</p>
-            </div>
-        );
+    // getImageInfo() {
+    //     if (!this.props.description) {
+    //         return null;
+    //     }
+    //     return (
+    //         <div className={css.info}>
+    //             {this.props.title ? <h2>{this.props.title}</h2> : null}
+    //             <p>{this.props.description}</p>
+    //         </div>
+    //     );
+    // }
+
+    showImage(e) {
+        e.stopPropagation();
+        this.context.setDetailImage(this.image);
     }
 
     render() {
@@ -88,10 +99,10 @@ export default class Card extends React.Component {
         };
 
         return (
-            <div className={css['card-widget']}>
+            <div onClick={(e) => this.showImage(e)} className={css['card-widget']}>
                 <div ref={this.filterRef} className={css['card-bg']}></div>
                 <div className={css.card}>
-                    {this.getImageInfo()}
+                    {/* {this.getImageInfo()} */}
                     <div
                         ref={this.imageRef}
                         className={`${css.image}`}

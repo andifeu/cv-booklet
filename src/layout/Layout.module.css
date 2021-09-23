@@ -4,11 +4,6 @@
     background-repeat: no-repeat;
 }
 
-/* .book.menu-shown {
-    transform: translateX(20%) rotateY(-20deg);
-    transition: transform 0.5s;
-} */
-
 .cover {
     width: 100%;
     height: 100%;

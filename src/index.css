@@ -97,4 +97,36 @@ a {
     max-width: var(--max-book-width);
     max-height: var(--max-book-height);
     vertical-align: middle;
+    perspective: 1500px;
+}
+
+.book {
+    transform: translateX(0);
+    transition: transform 0.5s;
+}
+
+.book.image-shown {
+    transform: translateX(-50%);
+    transition: transform 0.5s;
+}
+
+.detail-image {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.detail-image.hide {
+    transition: 0.5s;
+    transform: translateX(200%);
+}
+
+.detail-image.show {
+    transition: 0.5s;
+    transform: translateX(0%);
+}
+
+.detail-image img {
+    max-width: 100%;
 }

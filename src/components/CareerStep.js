@@ -15,7 +15,7 @@ export default function CareerStep(props) {
         import(`../images/${props.step.bgImage}`).then((image) => {
             setSource(image);
         });
-    }, []);
+    }, [props.step.bgImage]);
 
     if (props.step.technologies && Array.isArray(props.step.technologies)) {
         props.step.technologies.forEach(function (technology) {
