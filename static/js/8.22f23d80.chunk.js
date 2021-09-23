@@ -1,0 +1,2 @@
+(this["webpackJsonpcv-booklet"]=this["webpackJsonpcv-booklet"]||[]).push([[8],{60:function(t,c,e){"use strict";e.r(c),c.default=e.p+"static/media/gido.91cbe0cf.png"}}]);
+//# sourceMappingURL=8.22f23d80.chunk.js.map

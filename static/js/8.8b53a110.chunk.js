@@ -1,2 +1,0 @@
-(this["webpackJsonpcv-booklet"]=this["webpackJsonpcv-booklet"]||[]).push([[8],{56:function(t,o,s){"use strict";s.r(o),o.default=s.p+"static/media/ospneo-bg.9fb98dda.png"}}]);
-//# sourceMappingURL=8.8b53a110.chunk.js.map
