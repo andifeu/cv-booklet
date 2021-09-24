@@ -119,12 +119,12 @@ a {
 
 .detail-image.hide {
     transition: 0.5s;
-    transform: translateX(200%);
+    transform: translateX(150vw);
 }
 
 .detail-image.show {
     transition: 0.5s;
-    transform: translateX(0%);
+    transform: translateX(0);
 }
 
 .detail-image img {

@@ -1,30 +1,49 @@
 import { useState, createContext } from 'react';
 
 const ImageContext = createContext({
-    setDetailImage: (imageName) => {},
-    isImageShown: () => {},
-    getDetailImage: () => {}
+    setName: (name) => {},
+    getName: () => {},
+    isVsible: () => {},
+    setVisible: (visible) => {}
 });
 
 export function ImageContextProvider(props) {
-    const [detailImage, setImage] = useState(null);
+    const [detailImage, setImage] = useState({
+        visible: false,
+        name: null
+    });
 
-    function setDetailImage(imageName) {
-        setImage(imageName);
+    function setName(name) {
+        setImage(prevImage => {
+            return {
+                visible: prevImage.visible,
+                name: name
+            };
+        })
     }
 
-    function getDetailImage() {
-        return detailImage;
+    function getName() {
+        return detailImage.name;
     }
 
-    function isDetailImageShown() {
-        return detailImage !== null;
+    function isVisible() {
+        return detailImage.visible; 
+    }
+
+    function setVisible(visible) {
+        setImage(prevImage => {
+            return {
+                visible: visible,
+                name: prevImage.name
+            };
+        })
     }
 
     const context = {
-        isDetailImageShown: isDetailImageShown,
-        setDetailImage: setDetailImage,
-        getDetailImage: getDetailImage,
+        setName: setName,
+        getName: getName,
+        isVisible: isVisible,
+        setVisible: setVisible
     };
 
     return (

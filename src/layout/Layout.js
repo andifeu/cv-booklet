@@ -11,7 +11,7 @@ export default function Layout(props) {
     let perspectiveClass = 'book';
     let visibility = 'hide';
 
-    if (context.isDetailImageShown()) {
+    if (context.isVisible()) {
         perspectiveClass = 'book image-shown';
         visibility = 'show'
     }
@@ -22,7 +22,7 @@ export default function Layout(props) {
                 <Menu />
             </aside>
             <div className={`${css.book} ${perspectiveClass}`}>
-                {context.isDetailImageShown() && <Layer />}
+                {context.isVisible() && <Layer />}
                 <div className={css.cover}>
                     <div className={css['page-container']}>
                         <Book />
@@ -30,7 +30,12 @@ export default function Layout(props) {
                 </div>
             </div>
             <div className={`detail-image ${visibility}`}>
-                <img src={context.getDetailImage()} />
+                {
+                /**
+                 * @todo: Alt Tag mit Bildbeschreibung anpassen
+                 */
+                }
+                <img src={context.getName()} alt="Details" />
             </div>
         </>
     );

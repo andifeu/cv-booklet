@@ -25,11 +25,14 @@ class Book extends React.Component {
 
     browserInfo = null;
 
+    isSafari = false;
+
     constructor(props) {
         super(props);
         this.numPages = getNumberOfPages();
         this.numSites = Math.ceil(this.numPages / 2);
         this.browserInfo = detect();
+        this.isSafari = this.browserInfo.name === 'safari';
     }
 
     isAnimationActive() {
@@ -38,6 +41,8 @@ class Book extends React.Component {
 
     goToPageByUrl(url) {
         const pages = Config.pages;
+        const paginationInterval = 300;
+
         let i = 0, j = 0;
 
         if (url.indexOf('/') === 0) {
@@ -57,7 +62,7 @@ class Book extends React.Component {
                 this.pageAnimation(j, false);
                 j++;
             }
-        }, 300);
+        }, paginationInterval);
     }
 
     componentDidMount() {
@@ -133,13 +138,13 @@ class Book extends React.Component {
                     this.pageRefs[i].ref.current.style.display = '';
                 }
 
-                if (this.browserInfo.name === 'safari') {
+                if (this.isSafari) {
                     this.pageRefs[i].backRef.current.ref.current.style.transform = 'rotateY(180deg) translateZ(0.' + i + 'px)';
                 }
             }
         }
 
-        if (this.browserInfo.name === 'safari') {
+        if (this.isSafari) {
             page.backRef.current.ref.current.style.transform = 'rotateY(180deg) translateZ(0.' + this.pageRefs.length + 'px)';
         }
         page.animate((page) => {

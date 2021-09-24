@@ -7,7 +7,6 @@ import Toolkit from '../../utils/Toolkit';
 
 
 
-
 export default class Card extends React.Component {
 
     static contextType = ImageContext;
@@ -69,21 +68,10 @@ export default class Card extends React.Component {
         });
     }
 
-    // getImageInfo() {
-    //     if (!this.props.description) {
-    //         return null;
-    //     }
-    //     return (
-    //         <div className={css.info}>
-    //             {this.props.title ? <h2>{this.props.title}</h2> : null}
-    //             <p>{this.props.description}</p>
-    //         </div>
-    //     );
-    // }
-
     showImage(e) {
         e.stopPropagation();
-        this.context.setDetailImage(this.image);
+        this.context.setName(this.image);
+        this.context.setVisible(true);
     }
 
     render() {
@@ -102,7 +90,6 @@ export default class Card extends React.Component {
             <div onClick={(e) => this.showImage(e)} className={css['card-widget']}>
                 <div ref={this.filterRef} className={css['card-bg']}></div>
                 <div className={css.card}>
-                    {/* {this.getImageInfo()} */}
                     <div
                         ref={this.imageRef}
                         className={`${css.image}`}
