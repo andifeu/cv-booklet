@@ -6,7 +6,6 @@ import css from './Card.module.css';
 import Toolkit from '../../utils/Toolkit';
 
 
-
 export default class Card extends React.Component {
 
     static contextType = ImageContext;

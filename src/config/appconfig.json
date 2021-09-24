@@ -1,4 +1,7 @@
 {
+    "hashrouting": [
+        "andifeu.github.io"
+    ],
     "pages": [
         {
             "id": "about",

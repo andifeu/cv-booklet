@@ -35,7 +35,9 @@ export default function Layout(props) {
                  * @todo: Alt Tag mit Bildbeschreibung anpassen
                  */
                 }
-                <img src={context.getName()} alt="Details" />
+                <div className="image-container">
+                    <img src={context.getName()} alt="Details" />
+                </div>
             </div>
         </>
     );

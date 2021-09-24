@@ -1,4 +1,4 @@
-import Config from '../config/pageconfig.json';
+import Config from '../config/appconfig.json';
 
 import About from './contents/About';
 import Kompetenzen from './contents/Kompetenzen';

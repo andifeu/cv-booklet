@@ -5,7 +5,7 @@ import { detect } from 'detect-browser';
 import Page from './components/Page';
 import Menu from './components/Menu';
 
-import Config from './config/pageconfig.json';
+import Config from './config/appconfig.json';
 
 import styles from './Book.module.css';
 

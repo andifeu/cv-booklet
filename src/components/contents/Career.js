@@ -1,7 +1,7 @@
 import PageContent from './PageContent';
 import CareerStep from '../CareerStep';
 
-import Config from '../../config/pageconfig.json';
+import Config from '../../config/appconfig.json';
 
 export default class Career extends PageContent {
 

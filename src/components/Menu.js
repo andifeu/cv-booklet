@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import Config from '../config/pageconfig.json';
-
+import Config from '../config/appconfig.json';
 
 import styles from './Menu.module.css';
 
