@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,,800,900');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap');
 
 @font-face {
     font-family: 'Gabriele Bad';
@@ -97,7 +95,6 @@ a {
     max-width: var(--max-book-width);
     max-height: var(--max-book-height);
     vertical-align: middle;
-    perspective: 1500px;
 }
 
 .book {
