@@ -1,2 +1,0 @@
-(this["webpackJsonpcv-booklet"]=this["webpackJsonpcv-booklet"]||[]).push([[4],{56:function(t,c,e){"use strict";e.r(c),c.default=e.p+"static/media/avira.7e3bd2c6.png"}}]);
-//# sourceMappingURL=4.dabeaa87.chunk.js.map
