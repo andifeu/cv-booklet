@@ -2,17 +2,9 @@
     width: 50%;
     height: 100%;
     transform-style: preserve-3d;
-    transform: rotateY(2deg);
+    /* transform: rotateY(2deg); */
     transform-origin: 0% 0%;
     position: absolute;
-}
-
-.page-left {
-    height: 100%;
-    left: 0;
-}
-
-.page-right {
     height: 100%;
     right: 0;
 }
