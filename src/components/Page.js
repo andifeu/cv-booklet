@@ -57,10 +57,6 @@ export default class Page extends React.Component {
 
         keyframes1 = [2, -90];
         keyframes2 = [-90, -182];
-        if (this.browserInfo.name === 'safari') {
-            keyframes1 = [0, -90];
-            keyframes2 = [-90, -180];
-        }
 
         if (!this.isFrontActive()) {
             keyframes1 = [-182, -90];
@@ -92,10 +88,6 @@ export default class Page extends React.Component {
         let inlineCSS = {
             zIndex: (this.numSites - this.siteIndex) * 10,
         };
-
-        if (this.browserInfo.name === 'safari') {
-            inlineCSS.transform = 'rotate(0)';
-        }
 
         if (this.props.siteIndex > 0 && this.browserInfo.name === 'firefox') {
             inlineCSS.display = 'none';

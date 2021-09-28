@@ -42,6 +42,14 @@ export default class Kompetenzen extends PageContent {
                                 <FaCheck />
                                 React.js
                             </li>
+                            <li>
+                                <FaCheck />
+                                Next.js
+                            </li>
+                            <li>
+                                <FaCheck />
+                                Node.js
+                            </li>
                         </ul>
                     </div>
                 </PieChart>
@@ -86,8 +94,13 @@ export default class Kompetenzen extends PageContent {
                     value="90"
                 />
                 <PieChart
-                    label="MYSQL"
+                    label="MySQL"
                     sublabel="8 Jahre Erfahrung"
+                    value="85"
+                />
+                <PieChart
+                    label="MongoDB"
+                    sublabel="1 Jahre Erfahrung"
                     value="85"
                 />
                 <PieChart

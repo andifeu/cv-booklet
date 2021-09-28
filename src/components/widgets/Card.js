@@ -5,9 +5,7 @@ import ImageContext from '../../store/ImageContext';
 import css from './Card.module.css';
 import Toolkit from '../../utils/Toolkit';
 
-
 export default class Card extends React.Component {
-
     static contextType = ImageContext;
 
     breakpoint = 620;
@@ -30,12 +28,11 @@ export default class Card extends React.Component {
 
         this.imageRef = React.createRef(null);
         this.fallbackMode = this.browserInfo.name === 'safari';
-        if (this.fallbackMode) {
-            return;
-        }
-        this.filterId = props.filterId || 'card-filter_' + getRandomNumber();
         this.filterRef = React.createRef(null);
-        this.filterFrequency = props.filterFrequency || '0.02';
+        if (!this.fallbackMode) {
+            this.filterId = props.filterId || 'card-filter_' + getRandomNumber();
+            this.filterFrequency = props.filterFrequency || '0.02';
+        }
     }
 
     componentDidMount() {
@@ -74,19 +71,17 @@ export default class Card extends React.Component {
     }
 
     render() {
+        const bgImageCSS = {};
 
-        if (this.fallbackMode) {
-            return (
-                <img ref={this.imageRef} alt={this.props.title} src={this.image} />
-            );
+        if (this.image) {
+            bgImageCSS.backgroundImage = `url(${this.image})`;
         }
 
-        const bgImageCSS = {
-            backgroundImage: `url(${this.image})`,
-        };
-
         return (
-            <div onClick={(e) => this.showImage(e)} className={css['card-widget']}>
+            <div
+                onClick={(e) => this.showImage(e)}
+                className={css['card-widget']}
+            >
                 <div ref={this.filterRef} className={css['card-bg']}></div>
                 <div className={css.card}>
                     <div
@@ -133,12 +128,5 @@ function setFilter(card, initialize) {
 }
 
 function updateImage(card) {
-    if (card.fallbackMode) {
-        card.imageRef.current.src = card.image;
-        card.imageRef.current.style.height = '100%';
-        card.imageRef.current.style.width = 'auto';
-        card.imageRef.current.style.margin = 'auto';
-    } else {
-        card.imageRef.current.style.backgroundImage = `url(${card.image})`;
-    }
+    card.imageRef.current.style.backgroundImage = `url(${card.image})`;
 }

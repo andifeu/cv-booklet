@@ -7,8 +7,6 @@ import Layout from './layout/Layout';
 import Config from './config/appconfig.json';
 
 export default function App() {
-    if (Config.hashrouting[window.location.hostname]) {
-    }
 
     function getLayout() {
         return (
@@ -20,7 +18,7 @@ export default function App() {
 
     return (
         <React.StrictMode>
-            {Config.hashrouting[window.location.hostname] === undefined ? (
+            {Config.hashrouting.indexOf(window.location.hostname) === -1 ? (
                 <BrowserRouter>{getLayout()}</BrowserRouter>
             ) : (
                 <HashRouter>{getLayout()}</HashRouter>
