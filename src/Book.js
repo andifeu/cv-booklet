@@ -1,16 +1,17 @@
 import React from 'react';
-import { withRouter } from 'react-router';
 import { detect } from 'detect-browser';
 
 import Page from './components/Page';
 import Menu from './components/Menu';
+import Toolkit from './utils/Toolkit';
 
 import Config from './config/appconfig.json';
 
 import styles from './Book.module.css';
 
-class Book extends React.Component {
+const PAGINATION_INTERVAL = 300;
 
+class Book extends React.Component {
     numPages = 0;
 
     numSites = 0;
@@ -40,36 +41,62 @@ class Book extends React.Component {
     }
 
     goToPageByUrl(url) {
+        let int = null, targetPageIndex = 0, i = 0, j = 0, 
+            pageFound = false, pageUrl;
         const pages = Config.pages;
-        const paginationInterval = 300;
 
-        let i = 0, j = 0;
+        while (i < pages.length) {
+            pageUrl = pages[i].url;
+            if (pages[i].url.substr(0, 1) !== '/') {
+                pageUrl = '/' + pages[i].url;
+            }
 
-        if (url.indexOf('/') === 0) {
-            url = url.substr(1);
-        }
-
-        while (i < pages.length - 1) {
-            if (url === pages[i].url) {
+            if (url === pageUrl) {
+                pageFound = true;
                 break;
             }
             i++;
         }
 
-        const numPagesToTurn = Math.floor((i + 1) / 2);
-        setInterval(() => {
+        if (!pageFound) {
+            this.props.history.replace('');
+            return;
+        }
+
+        targetPageIndex = Math.floor((i + 1) / 2);
+        const numPagesToTurn = targetPageIndex - this.activePageIndex;
+
+        let goToPage = () => {
             if (j < numPagesToTurn) {
                 this.pageAnimation(j, false);
                 j++;
+            } else {
+                clearInterval(int);
             }
-        }, paginationInterval);
+        }
+        
+        if (numPagesToTurn < 0) {
+            j = Math.abs(numPagesToTurn) - 1;
+            goToPage = () => {
+                if (j >= 0) {
+                    this.pageAnimation(j, false);
+                    j--;
+                } else {
+                    clearInterval(int);
+                }
+            }
+        }
+
+        int = setInterval(goToPage, PAGINATION_INTERVAL);
     }
 
     componentDidMount() {
         document.addEventListener('wheel', this.mousewheelHandler.bind(this));
         this.goToPageByUrl(this.props.location.pathname);
 
+        setMenuVisibility(this.props.menuRef.current, window.location.pathname);
         this.props.history.listen((location) => {
+            setMenuVisibility(this.props.menuRef.current, location.pathname);
             if (
                 !location.autoChange &&
                 this.props.location.pathname !== location.pathname &&
@@ -120,7 +147,7 @@ class Book extends React.Component {
             frontActive = page.isFrontActive(),
             animationActive = this.isAnimationActive();
 
-        if (animationActive && blockWhileActive) {
+        if ((animationActive && blockWhileActive) ||  page.pageBackEmpty){
             return;
         }
 
@@ -189,7 +216,6 @@ class Book extends React.Component {
                     numSites={this.numSites}
                     siteIndex={i}
                     ref={(ref) => {
-                        this.pageRefs[i] = React.createRef();
                         this.pageRefs[i] = ref;
                     }}
                     onPageClick={pageClickListener}
@@ -244,4 +270,12 @@ function setUrlForPageNum(history, pageNum) {
     }
 }
 
-export default withRouter(Book);
+function setMenuVisibility(menuDom, pathname) {
+    if (pathname === '/') {
+        menuDom.classList.add('hide');
+    } else {
+        menuDom.classList.remove('hide');
+    }
+}
+
+export default Toolkit.withRouterAndRef(Book);

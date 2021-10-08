@@ -1,5 +1,5 @@
 import React from 'react';
-import PageContent from './ContentContainer';
+import ContentContainer from './ContentContainer';
 import Toolkit from '../utils/Toolkit';
 
 import { detect } from 'detect-browser';
@@ -26,6 +26,8 @@ export default class Page extends React.Component {
 
     browserInfo = null;
 
+    pageBackEmpty = false;
+
     constructor(props) {
         super(props);
         this.siteIndex = props.siteIndex;
@@ -35,6 +37,7 @@ export default class Page extends React.Component {
         this.frontRef = React.createRef();
         this.backRef = React.createRef();
         this.browserInfo = detect();
+        this.isSafari = this.browserInfo.name === 'safari';
     }
 
     setFrontActive(activeState) {
@@ -63,14 +66,14 @@ export default class Page extends React.Component {
         /**
          * Safari looses z-order of pages when they have the same rotateY value
          */
-        if (this.browserInfo.name === 'safari') {
+        if (this.isSafari) {
             min = 0;
             max = -180 + this.siteIndex / 10;
         }
 
         if (!this.isFrontActive()) {
             min = max;
-            max = this.browserInfo.name === 'safari' ? 0 : 2;
+            max = this.isSafari ? 0 : 2;
             zIndex = (this.numSites - this.siteIndex) * 10;
         }
 
@@ -93,6 +96,7 @@ export default class Page extends React.Component {
     render() {
         let inlineCSS = {
             zIndex: (this.numSites - this.siteIndex) * 10,
+            transform: this.isSafari ? 'rotateY(0)' : 'rotateY(2deg)'
         };
 
         if (this.props.siteIndex > 0 && this.browserInfo.name === 'firefox') {
@@ -106,20 +110,22 @@ export default class Page extends React.Component {
                 onClick={this.props.onPageClick.bind(this)}
                 className={styles.page}
             >
-                <PageContent
+                <ContentContainer
                     ref={this.frontRef}
                     type="front"
                     pageNum={this.pageNum}
+                    page={this}
                 >
                     <h1>{this.pageNum}</h1>
-                </PageContent>
-                <PageContent
+                </ContentContainer>
+                <ContentContainer
                     ref={this.backRef}
                     type="back"
                     pageNum={this.pageNum + 1}
+                    page={this}
                 >
                     <h1>{this.pageNum + 1}</h1>
-                </PageContent>
+                </ContentContainer>
             </div>
         );
     }

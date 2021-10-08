@@ -16,29 +16,31 @@ export default class ContentContainer extends React.Component {
         const pageConfig = getComponentByPageNum(this.props.pageNum - 1);
         const Content = pageConfig?.component;
 
+        if (!Content) {
+            this.props.page.pageBackEmpty = true;
+        }
+
         return (
-            <>
-                <div
-                    ref={this.ref}
-                    className={`${styles['page-content']} ${this.pageType}`}
-                >
-                    <div className={styles['page-content-header']}></div>
-                    <div className={`${styles['page-content-text']}`}>
-                        {Content && pageConfig && (
-                            <Content
-                                key={pageConfig.id}
-                                headline={pageConfig.headline}
-                                pageNum={this.props.pageNum}
-                                part={pageConfig.part}
-                            />
-                        )}
-                        <div className={styles['page-num']}>
-                            {this.props.pageNum}
-                        </div>
+            <div
+                ref={this.ref}
+                className={`${styles['page-content']} ${this.pageType}`}
+            >
+                <div className={styles['page-content-header']}></div>
+                <div className={`${styles['page-content-text']}`}>
+                    {Content && pageConfig && (
+                        <Content
+                            key={pageConfig.id}
+                            headline={pageConfig.headline}
+                            pageNum={this.props.pageNum}
+                            part={pageConfig.part}
+                        />
+                    )}
+                    <div className={styles['page-num']}>
+                        {this.props.pageNum}
                     </div>
-                    <div className={styles['page-content-footer']}></div>
                 </div>
-            </>
+                <div className={styles['page-content-footer']}></div>
+            </div>
         );
     }
 }
