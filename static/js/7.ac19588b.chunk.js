@@ -1,0 +1,2 @@
+(this["webpackJsonpcv-booklet"]=this["webpackJsonpcv-booklet"]||[]).push([[7],{59:function(t,o,c){"use strict";c.r(o),o.default=c.p+"static/media/cv-booklet.85b5b4f0.png"}}]);
+//# sourceMappingURL=7.ac19588b.chunk.js.map
