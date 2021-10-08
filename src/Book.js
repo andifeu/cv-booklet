@@ -94,7 +94,7 @@ class Book extends React.Component {
         document.addEventListener('wheel', this.mousewheelHandler.bind(this));
         this.goToPageByUrl(this.props.location.pathname);
 
-        setMenuVisibility(this.props.menuRef.current, window.location.pathname);
+        setMenuVisibility(this.props.menuRef.current, this.props.history.location.pathname);
         this.props.history.listen((location) => {
             setMenuVisibility(this.props.menuRef.current, location.pathname);
             if (
