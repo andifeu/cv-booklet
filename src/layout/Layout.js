@@ -4,7 +4,7 @@ import Book from '../Book';
 import Layer from '../components/Layer';
 import ImageContext from '../store/ImageContext';
 
-import css from './Layout.module.css';
+import css from '../styles/Layout.module.css';
 
 export default function Layout() {
     const menuRef = useRef(null);

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Easypiechart from '../../plugins/easypiechart';
 
-import css from './PieChart.module.css';
+import css from '../../styles/PieChart.module.css';
 
 const CONFIG = {
     barColor: '#3c77b1',

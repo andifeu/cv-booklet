@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: 'Gabriele Bad';
-    src: url('./fonts/gabriele-bad.ttf') format('truetype');
+    src: url('../fonts/gabriele-bad.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Gabriele Black';
-    src: url('./fonts/gabriele-br.ttf') format('truetype');
+    src: url('../fonts/gabriele-br.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Gabriele Light';
-    src: url('./fonts/gabriele-l.ttf') format('truetype');
+    src: url('../fonts/gabriele-l.ttf') format('truetype');
 }
 
 * {
@@ -61,7 +61,7 @@ body {
     display: flex;
     overflow: hidden;
     background-color: var(--body-bg-color);
-    background-image: url('./images/wood-bg.jpg');
+    background-image: url('../images/wood-bg.jpg');
     background-size: cover;
 }
 

@@ -7,7 +7,7 @@ import Toolkit from './utils/Toolkit';
 
 import Config from './config/appconfig.json';
 
-import styles from './Book.module.css';
+import styles from './styles/Book.module.css';
 
 const PAGINATION_INTERVAL = 300;
 

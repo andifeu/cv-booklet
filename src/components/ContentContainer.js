@@ -1,7 +1,7 @@
 import React from 'react';
 
-import styles from './ContentContainer.module.css';
 import { getComponentByPageNum } from '../components/ContentLoader';
+import styles from '../styles/ContentContainer.module.css';
 
 export default class ContentContainer extends React.Component {
     constructor(props) {

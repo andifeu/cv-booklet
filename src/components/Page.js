@@ -4,7 +4,7 @@ import Toolkit from '../utils/Toolkit';
 
 import { detect } from 'detect-browser';
 
-import styles from './Page.module.css';
+import styles from '../styles/Page.module.css';
 
 /**
  * Animation duration in ms

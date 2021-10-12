@@ -1,6 +1,7 @@
-import css from './contents/PageContent.module.css';
-import { FaCheck } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
+import { FaCheck } from 'react-icons/fa';
+
+import css from '../styles/PageContent.module.css';
 
 export default function CareerStep(props) {
     const technologies = [];

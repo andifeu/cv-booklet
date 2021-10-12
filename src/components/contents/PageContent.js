@@ -1,6 +1,6 @@
 import React from 'react';
 
-import css from './PageContent.module.css';
+import css from '../../styles/PageContent.module.css';
 
 export default class PageContent extends React.Component {
     constructor(props) {

@@ -2,7 +2,7 @@ import React from 'react';
 import { detect } from 'detect-browser';
 import ImageContext from '../../store/ImageContext';
 
-import css from './Card.module.css';
+import css from '../../styles/Card.module.css';
 import Toolkit from '../../utils/Toolkit';
 
 export default class Card extends React.Component {

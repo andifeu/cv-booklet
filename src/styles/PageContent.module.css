@@ -26,12 +26,12 @@
 }
 
 .portrait {
-    background: url('../../images/portrait.jpg');
+    background: url('../images/portrait.jpg');
 }
 
 .portrait-pencil {
-    background: url('../../images/portrait.jpg'),
-        url('../../images/portrait.jpg');
+    background: url('../images/portrait.jpg'),
+        url('../images/portrait.jpg');
 }
 
 .bg-image:hover {
@@ -121,11 +121,11 @@
 }
 
 .ospneo-bg {
-    background-image: url('../../images/ospneo-bg.png');
+    background-image: url('../images/ospneo-bg.png');
 }
 
 .giesecke-bg {
-    background-image: url('../../images/giesecke-bg.jpeg');
+    background-image: url('../images/giesecke-bg.jpeg');
 }
 
 .sources {
