@@ -3,7 +3,7 @@ import { useState, createContext } from 'react';
 const ImageContext = createContext({
     setName: (name) => {},
     getName: () => {},
-    isVsible: () => {},
+    isVisible: () => {},
     setVisible: (visible) => {}
 });
 

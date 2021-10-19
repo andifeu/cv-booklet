@@ -17,7 +17,8 @@ const CONFIG = {
     },
 };
 
-export default class PageContent extends React.Component {
+export default class PieChart extends React.Component {
+    
     constructor(props) {
         super(props);
         this.label = props.label;

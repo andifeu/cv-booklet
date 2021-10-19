@@ -20,9 +20,9 @@ export default class Career extends PageContent {
     }
 
 
-    render1() {
+    getPageContent(pageNumber) {
         const elements = [];
-        this.careerElements[0].forEach(step => {
+        this.careerElements[pageNumber].forEach(step => {
             elements.push(<CareerStep key={step.id} step={step} />);
         });
 
@@ -34,17 +34,12 @@ export default class Career extends PageContent {
         );
     }
 
-    render2() {
-        const elements = [];
-        this.careerElements[1].forEach(step => {
-            elements.push(<CareerStep key={step.id} step={step} />);
-        });
 
-        return (
-            <>
-                <h2>{this.headline}</h2>
-                {elements}
-            </>
-        );
+    render1() {
+        return this.getPageContent(1);
+    }
+
+    render2() {
+        return this.getPageContent(1);
     }
 }
