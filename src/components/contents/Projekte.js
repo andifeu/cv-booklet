@@ -115,18 +115,31 @@ export default class Projekte extends PageContent {
         const desc = (
             <>
                 Entwicklung eines Lebenslaufs in Form eines 3D-Hefts auf Basis
-                von Vanilla Javascript und React.js.
+                von Typescript und Next.js.
             </>
         );
 
         const code = (
-            <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://github.com/andifeu/cv-booklet/tree/master"
-            >
-                Github
-            </a>
+            <ul className={this.css['code-links']}>
+                <li>
+                    <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://github.com/andifeu/cv-book-ts"
+                    >
+                        Github: Typescript/Next.js Version
+                    </a>
+                </li>
+                <li>
+                    <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://github.com/andifeu/cv-booklet/tree/master"
+                    >
+                        Github: Javascript/React Version
+                    </a>
+                </li>
+            </ul>
         );
 
         const demo = (
@@ -144,7 +157,7 @@ export default class Projekte extends PageContent {
                 projectname="CV Booklet"
                 image={image}
                 customer="privates Projekt"
-                duration="August 2021 - September 2021"
+                duration="August 2021 - Oktober 2021"
                 technologies={['Javascript', 'React.js']}
                 description={desc}
                 code={code}
