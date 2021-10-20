@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/cv-booklet/static/css/main.7cee67d1.chunk.css",
-    "main.js": "/cv-booklet/static/js/main.d6b16653.chunk.js",
-    "main.js.map": "/cv-booklet/static/js/main.d6b16653.chunk.js.map",
+    "main.css": "/cv-booklet/static/css/main.4356e776.chunk.css",
+    "main.js": "/cv-booklet/static/js/main.873d143e.chunk.js",
+    "main.js.map": "/cv-booklet/static/js/main.873d143e.chunk.js.map",
     "runtime-main.js": "/cv-booklet/static/js/runtime-main.ee292762.js",
     "runtime-main.js.map": "/cv-booklet/static/js/runtime-main.ee292762.js.map",
     "static/js/2.26aa1e44.chunk.js": "/cv-booklet/static/js/2.26aa1e44.chunk.js",
@@ -38,15 +38,15 @@
     "static/js/17.32d9b5dd.chunk.js": "/cv-booklet/static/js/17.32d9b5dd.chunk.js",
     "static/js/17.32d9b5dd.chunk.js.map": "/cv-booklet/static/js/17.32d9b5dd.chunk.js.map",
     "index.html": "/cv-booklet/index.html",
-    "static/css/main.7cee67d1.chunk.css.map": "/cv-booklet/static/css/main.7cee67d1.chunk.css.map",
+    "static/css/main.4356e776.chunk.css.map": "/cv-booklet/static/css/main.4356e776.chunk.css.map",
     "static/js/2.26aa1e44.chunk.js.LICENSE.txt": "/cv-booklet/static/js/2.26aa1e44.chunk.js.LICENSE.txt",
-    "static/js/main.d6b16653.chunk.js.LICENSE.txt": "/cv-booklet/static/js/main.d6b16653.chunk.js.LICENSE.txt",
+    "static/js/main.873d143e.chunk.js.LICENSE.txt": "/cv-booklet/static/js/main.873d143e.chunk.js.LICENSE.txt",
     "static/media/avira-logo.png": "/cv-booklet/static/media/avira-logo.53612c46.png",
     "static/media/avira.png": "/cv-booklet/static/media/avira.7e3bd2c6.png",
     "static/media/check24.png": "/cv-booklet/static/media/check24.fd98947e.png",
     "static/media/content-bg.jpg": "/cv-booklet/static/media/content-bg.ff40f717.jpg",
     "static/media/cv-booklet.png": "/cv-booklet/static/media/cv-booklet.85b5b4f0.png",
-    "static/media/index.css": "/cv-booklet/static/media/gabriele-l.2be0f436.ttf",
+    "static/media/globals.css": "/cv-booklet/static/media/gabriele-l.2be0f436.ttf",
     "static/media/gido.png": "/cv-booklet/static/media/gido.91cbe0cf.png",
     "static/media/giesecke-bg.jpeg": "/cv-booklet/static/media/giesecke-bg.681f44ce.jpeg",
     "static/media/ospneo-bg.png": "/cv-booklet/static/media/ospneo-bg.9fb98dda.png",
@@ -59,7 +59,7 @@
   "entrypoints": [
     "static/js/runtime-main.ee292762.js",
     "static/js/2.26aa1e44.chunk.js",
-    "static/css/main.7cee67d1.chunk.css",
-    "static/js/main.d6b16653.chunk.js"
+    "static/css/main.4356e776.chunk.css",
+    "static/js/main.873d143e.chunk.js"
   ]
 }
