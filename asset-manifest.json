@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/cv-booklet/static/css/main.998bb363.chunk.css",
-    "main.js": "/cv-booklet/static/js/main.e0081501.chunk.js",
-    "main.js.map": "/cv-booklet/static/js/main.e0081501.chunk.js.map",
+    "main.css": "/cv-booklet/static/css/main.35b84b73.chunk.css",
+    "main.js": "/cv-booklet/static/js/main.c040c80b.chunk.js",
+    "main.js.map": "/cv-booklet/static/js/main.c040c80b.chunk.js.map",
     "runtime-main.js": "/cv-booklet/static/js/runtime-main.ee292762.js",
     "runtime-main.js.map": "/cv-booklet/static/js/runtime-main.ee292762.js.map",
     "static/js/2.26aa1e44.chunk.js": "/cv-booklet/static/js/2.26aa1e44.chunk.js",
@@ -38,9 +38,9 @@
     "static/js/17.32d9b5dd.chunk.js": "/cv-booklet/static/js/17.32d9b5dd.chunk.js",
     "static/js/17.32d9b5dd.chunk.js.map": "/cv-booklet/static/js/17.32d9b5dd.chunk.js.map",
     "index.html": "/cv-booklet/index.html",
-    "static/css/main.998bb363.chunk.css.map": "/cv-booklet/static/css/main.998bb363.chunk.css.map",
+    "static/css/main.35b84b73.chunk.css.map": "/cv-booklet/static/css/main.35b84b73.chunk.css.map",
     "static/js/2.26aa1e44.chunk.js.LICENSE.txt": "/cv-booklet/static/js/2.26aa1e44.chunk.js.LICENSE.txt",
-    "static/js/main.e0081501.chunk.js.LICENSE.txt": "/cv-booklet/static/js/main.e0081501.chunk.js.LICENSE.txt",
+    "static/js/main.c040c80b.chunk.js.LICENSE.txt": "/cv-booklet/static/js/main.c040c80b.chunk.js.LICENSE.txt",
     "static/media/avira-logo.png": "/cv-booklet/static/media/avira-logo.53612c46.png",
     "static/media/avira.png": "/cv-booklet/static/media/avira.7e3bd2c6.png",
     "static/media/check24.png": "/cv-booklet/static/media/check24.fd98947e.png",
@@ -59,7 +59,7 @@
   "entrypoints": [
     "static/js/runtime-main.ee292762.js",
     "static/js/2.26aa1e44.chunk.js",
-    "static/css/main.998bb363.chunk.css",
-    "static/js/main.e0081501.chunk.js"
+    "static/css/main.35b84b73.chunk.css",
+    "static/js/main.c040c80b.chunk.js"
   ]
 }
