@@ -23,7 +23,7 @@ export default class Ausbildung extends PageContent {
                 <p>
                     Tel.:&nbsp;
                     <a onClick={(e) => this.callNumber(e)} href="/#">
-                        0 1575 / 30 933 62
+                        anrufen
                     </a>
                 </p>
                 <div className={this.css.address}>
