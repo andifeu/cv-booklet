@@ -78,7 +78,7 @@ export default class Kompetenzen extends PageContent {
                 </PieChart>
                 <PieChart
                     label="HTML 5"
-                    sublabel="8 Jahre Erfahrung"
+                    sublabel="10 Jahre Erfahrung"
                     value="90"
                 />
             </>
